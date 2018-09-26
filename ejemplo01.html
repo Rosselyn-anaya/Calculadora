@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body >
+
+    <div ng-app="" ng-init="mensaje='Escriba algo:'">
+        <h2>Hola <span ng-bind="mensaje"></span></h2>
+        Texto: <input type="text"  ng-model="texto"> 
+          <h1 ng-bind="texto"></h1>
+          <p ng-bind="texto"></p>
+
+          <h3>Expresiones:</h3>
+          <div>
+              {{texto+"....Escrito por un input"}}
+          </div>
+         <div>
+                Nombre: <input type="text" placeholder="Digite su nombre" ng-model="nombre"> 
+                <br><br>
+                Apellido: <input type="text" placeholder="Digite su Apellido" ng-model="a">
+        </div>
+        <div>
+              <h1>Su Nombre es: {{nombre + " "+ a}}</h1>  
+        </div>
+        <h3>Datos Numericos</h3>
+      Numero 1:<input type="number" ng-model="n1"><br><br>
+      Numero 2:<input type="number" ng-model="n2">
+      <h4>La suma es:{{n1+n2}}</h4>
+    </div>
+    <br><br>
+
+
+    
+</body>
+</html>
